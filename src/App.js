@@ -13,6 +13,7 @@ import Login from './Login';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/appSlice';
 import { auth } from './firebase';
+import ghost from './images/ghost.png';
 
 function App() {
   const user = useSelector(selectUser);
@@ -38,7 +39,7 @@ function App() {
           <Login />
         ) : (
             <>
-              <img src="https://lakeridgenewsonline.com/wp-content/uploads/2020/04/snapchat.jpg" alt="" className="app__logo" />
+              <img src={ghost} alt="" className="app__logo" />
               <div className='app__body'>
                 <div className="app__bodyBackground">
                   {/* A <Switch> looks through its children <Route>s and
